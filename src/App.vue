@@ -29,6 +29,9 @@
         <v-btn text to="/login">
           Login
         </v-btn>
+      <v-btn text to="/Beispiel">
+        Beispiel
+      </v-btn>
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
