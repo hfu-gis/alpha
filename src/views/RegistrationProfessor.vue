@@ -1,7 +1,7 @@
 <template>
   <div class="body-1">
     <!-- HTML-Code aus dem Body-Tag hier einfügen -->
-    <body>
+
     <h1>Get an <span style="color: #191919;">ALPHA</span> Professor Account</h1>
     <form id="registration-form" action="" method="get">
         <div class="container-form">
@@ -40,7 +40,7 @@
             </div>
         </div>
     </form>
-</body>
+
   </div>
 </template>
 

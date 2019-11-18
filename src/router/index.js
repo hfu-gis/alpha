@@ -4,7 +4,9 @@ import Login from '../views/Login'
 import HelloWorld from "../components/HelloWorld";
 import Beispiel from "../views/Beispiel";
 import RegistrationProfessor from "../views/RegistrationProfessor";
-import Settings from "../views/Settings";
+import Modulauswahl from "../views/Modulauswahl";
+import App from "../App";
+
 
 
 Vue.use(VueRouter)
@@ -12,8 +14,8 @@ Vue.use(VueRouter)
 export default new VueRouter({
     routes: [
         {
-            path: '/home',
-            component: HelloWorld
+            path: '/',
+            component: App
         },
         {
             path: '/login',
@@ -28,9 +30,11 @@ export default new VueRouter({
             component: RegistrationProfessor
         },
         {
-            path: '/Settings',
-            component: Settings
+            path: '/Modulauswahl',
+            component: Modulauswahl
         }
+
+
 
     ]
 })

@@ -24,17 +24,19 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\lukas\WebstormProjects\ALPH" />
+      <recent name="C:\Users\lukas\WebstormProjects\ALPH\src\assets\images" />
       <recent name="C:\Users\lukas\WebstormProjects\ALPH\src\views" />
+      <recent name="C:\Users\lukas\WebstormProjects\ALPH" />
       <recent name="C:\Users\lukas\WebstormProjects\ALPH\CHAT\MODUL" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\lukas\WebstormProjects\ALPH\src\assets\images" />
       <recent name="C:\Users\lukas\WebstormProjects\ALPH\src\views" />
       <recent name="$PROJECT_DIR$/settings" />
       <recent name="$PROJECT_DIR$" />
@@ -69,7 +71,8 @@
       <workItem from="1573925327335" duration="227000" />
       <workItem from="1574001093512" duration="2603000" />
       <workItem from="1574074404916" duration="1734000" />
-      <workItem from="1574080344832" duration="2187000" />
+      <workItem from="1574080344832" duration="6868000" />
+      <workItem from="1574088299423" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="merge Master mit Template">
       <created>1573484816272</created>
@@ -99,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1574082432599</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Bild Comitted">
+      <created>1574082558601</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574082558601</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Layout">
+      <created>1574089432746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574089432746</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -124,6 +141,7 @@
     <MESSAGE value="merge Master mit Template" />
     <MESSAGE value="beispiel comitted" />
     <MESSAGE value="Bild Comitted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bild Comitted" />
+    <MESSAGE value="Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout" />
   </component>
 </project>

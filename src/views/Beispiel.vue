@@ -108,12 +108,12 @@ export default {
 
 
   .flip-box-front {
-    background-image: url("ModulBild.jpg");
+    background-image: url("../assets/images/ModulBild.jpg");
     color: white;
   }
 
   .flip-box-back {
-    background-image: url("ModulBild.jpg");
+    background-image: url("../assets/images/ModulBild.jpg");
     color: white;
     transform: rotateY(180deg);
   }
