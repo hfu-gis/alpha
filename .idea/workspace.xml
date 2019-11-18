@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="163323f2-c2c3-4baf-8d39-d755ba2efe96" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/views/Modulauswahl.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/Modulauswahl.vue" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +77,7 @@
       <workItem from="1574001093512" duration="2603000" />
       <workItem from="1574074404916" duration="1734000" />
       <workItem from="1574080344832" duration="6868000" />
-      <workItem from="1574088299423" duration="1744000" />
+      <workItem from="1574088299423" duration="3820000" />
     </task>
     <task id="LOCAL-00001" summary="merge Master mit Template">
       <created>1573484816272</created>
@@ -132,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574089890429</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Modul Push">
+      <created>1574090063955</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1574090063955</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -158,6 +168,7 @@
     <MESSAGE value="beispiel comitted" />
     <MESSAGE value="Bild Comitted" />
     <MESSAGE value="Layout" />
-    <option name="LAST_COMMIT_MESSAGE" value="Layout" />
+    <MESSAGE value="Modul Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modul Push" />
   </component>
 </project>

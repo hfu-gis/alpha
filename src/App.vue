@@ -4,6 +4,7 @@
             v-model="drawer"
             app
             clipped
+
     >
       <v-list dense>
         <v-list-item link>
@@ -14,12 +15,13 @@
             <v-list-item-title>Dashboard</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item link>
-          <v-list-item-action>
+
+        <v-list-item link :to="{name:'/Settings'}">
+          <v-list-item-action >
             <v-icon>mdi-settings</v-icon>
           </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title>Settings</v-list-item-title>
+          <v-list-item-content >
+            <v-list-item-title>Settings </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -28,6 +30,7 @@
     <v-app-bar
             app
             clipped-left
+            src="https://picsum.photos/seed/picsum/1920/1080"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Application</v-toolbar-title>
