@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="163323f2-c2c3-4baf-8d39-d755ba2efe96" name="Default Changelist" comment="Layout">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/router/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Beispiel.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/Beispiel.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ModulBild.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/ModulBild.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/RegistrationProfessor.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/RegistrationProfessor.vue" afterDir="false" />
-    </list>
+    <list default="true" id="163323f2-c2c3-4baf-8d39-d755ba2efe96" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
       <workItem from="1574001093512" duration="2603000" />
       <workItem from="1574074404916" duration="1734000" />
       <workItem from="1574080344832" duration="6868000" />
-      <workItem from="1574088299423" duration="945000" />
+      <workItem from="1574088299423" duration="1227000" />
     </task>
     <task id="LOCAL-00001" summary="merge Master mit Template">
       <created>1573484816272</created>
@@ -116,7 +109,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574082558601</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Layout">
+      <created>1574089432746</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574089432746</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +141,7 @@
     <MESSAGE value="merge Master mit Template" />
     <MESSAGE value="beispiel comitted" />
     <MESSAGE value="Bild Comitted" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bild Comitted" />
+    <MESSAGE value="Layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="Layout" />
   </component>
 </project>
