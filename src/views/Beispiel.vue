@@ -68,5 +68,53 @@ export default {
 </script>
 
 <style scoped>
-/* CSS für diese Seite hier einfügen */
+  .flip-box {
+    background-color: transparent;
+    width: 400px;
+    height: 600px;
+    border: 1px solid #f1f1f1;
+    perspective: 1000px;
+    margin: 110px;
+    float: left;
+    border-radius: 20px;
+
+
+  }
+
+
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+
+  }
+
+
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+
+
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+  }
+
+
+  .flip-box-front {
+    background-image: url("ModulBild.jpg");
+    color: white;
+  }
+
+  .flip-box-back {
+    background-image: url("ModulBild.jpg");
+    color: white;
+    transform: rotateY(180deg);
+  }
 </style>

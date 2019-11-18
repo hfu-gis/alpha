@@ -30,8 +30,10 @@
           Login
         </v-btn>
       <v-btn text to="/Beispiel">
-        Beispiel
+        Module
       </v-btn>
+
+
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"

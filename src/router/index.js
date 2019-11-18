@@ -4,6 +4,8 @@ import Login from '../views/Login'
 import HelloWorld from "../components/HelloWorld";
 import Beispiel from "../views/Beispiel";
 
+
+
 Vue.use(VueRouter)
 
 export default new VueRouter({
@@ -20,5 +22,6 @@ export default new VueRouter({
             path: '/Beispiel',
             component: Beispiel
         }
+
     ]
 })
