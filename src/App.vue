@@ -32,6 +32,9 @@
       <v-btn text to="/Beispiel">
         Module
       </v-btn>
+      <v-btn text to="/RegistrationProfessor">
+        Registrierung Professor
+      </v-btn>
 
 
 

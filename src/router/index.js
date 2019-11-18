@@ -21,6 +21,10 @@ export default new VueRouter({
         {
             path: '/Beispiel',
             component: Beispiel
+        },
+        {
+            path: '/RegistrationProfessor',
+            component: RegistrationProfessor
         }
 
     ]
