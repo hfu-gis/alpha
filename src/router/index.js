@@ -4,6 +4,7 @@ import Login from '../views/Login'
 import HelloWorld from "../components/HelloWorld";
 import Beispiel from "../views/Beispiel";
 import RegistrationProfessor from "../views/RegistrationProfessor";
+import Settings from "../views/Settings";
 
 
 Vue.use(VueRouter)
@@ -25,6 +26,10 @@ export default new VueRouter({
         {
             path: '/RegistrationProfessor',
             component: RegistrationProfessor
+        },
+        {
+            path: '/Settings',
+            component: Settings
         }
 
     ]

@@ -36,6 +36,11 @@
         Registrierung Professor
       </v-btn>
 
+      <v-btn text to="/Settings">
+        Einstellungen
+      </v-btn>
+
+
 
 
       <v-btn
