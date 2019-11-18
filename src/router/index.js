@@ -4,7 +4,7 @@ import Login from '../views/Login'
 import HelloWorld from "../components/HelloWorld";
 import Beispiel from "../views/Beispiel";
 import RegistrationProfessor from "../views/RegistrationProfessor";
-import Modulauswahl from "../views/Modulauswahl";
+
 import App from "../App";
 
 
@@ -29,10 +29,7 @@ export default new VueRouter({
             path: '/RegistrationProfessor',
             component: RegistrationProfessor
         },
-        {
-            path: '/Modulauswahl',
-            component: Modulauswahl
-        }
+       
 
 
 
