@@ -7,7 +7,7 @@
     >
      
       <v-list>
-        <v-list-item v-for="link in links" :key="link.text" :to="link.to" link>
+        <v-list-item v-for="link in links" :key="link.text" :to="link.to" link @click.stop="drawer = !drawer">
           <v-list-item-icon>
             <v-icon class="white--text">{{ link.icon }}</v-icon>
           </v-list-item-icon>
