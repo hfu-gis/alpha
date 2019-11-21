@@ -63,8 +63,7 @@
         drawer: false,
         links: [
         { icon: 'mdi-view-dashboard', text: 'Dashboard', to: "/" },
-        { icon: 'mdi-folder', text: 'Test Page', to: '/views/testPage' },
-        { icon: 'mdi-account', text: 'Settings', to: "/views/Settings" },
+        { icon: 'mdi-account', text: 'Login', to: "/login" },
       ]
       }
     }
