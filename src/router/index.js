@@ -5,42 +5,34 @@ import Beispiel from "../views/Beispiel";
 import RegistrationProfessor from "../views/RegistrationProfessor";
 import testPage from "../views/testPage"
 
-import App from "../App";
-
-
-
 Vue.use(VueRouter)
 
+const routes = [
+    {
+        path: '/',
+        name: 'testPage',
+        component: testPage
+    },
+    {
+        path: '/login',
+        name: 'login',
+        component: Login
+    },
+    {
+        path: '/beispiel',
+        name: 'Beispiel',
+        component: Beispiel
+    },
+    {
+        path: '/RegistrationProfessor',
+        component: RegistrationProfessor
+    },
+
+]
+
+
 export default new VueRouter({
-    routes: [
-        {
-            path: '/',
-            name: 'App',
-            component: App
-        },
-        {
-            path: '/login',
-            
-            component: Login
-        },
-        {
-            path: '/Beispiel',
-            name: 'Beispiel',
-            component: Beispiel
-        },
-        {
-            path: '/RegistrationProfessor',
-            component: RegistrationProfessor
-        },
-
-        {
-            path: '/views/testPage',
-            name: 'testPage',
-            component: testPage
-        }
-       
-
-
-
-    ]
+    mode: 'history',
+    base: process.env.BASE_URL,
+    routes
 })
