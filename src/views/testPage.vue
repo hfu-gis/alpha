@@ -6,7 +6,7 @@
     <div>
         <h1>testPage</h1>
         <p>Dies ist eine Testseite!</p>
-        <a href="../views/Login">join now!</a>
+        <a>join now!</a>
     </div>
 
     
