@@ -1,86 +1,44 @@
 <template>
-  <v-app id="inspire">
+  <v-app id="app">
     <v-navigation-drawer
             v-model="drawer"
             app
             clipped
-
     >
-      <v-list dense>
-        <v-list-item link>
-          <v-list-item-action>
-            <v-icon>mdi-view-dashboard</v-icon>
-          </v-list-item-action>
+     
+      <v-list>
+        <v-list-item v-for="link in links" :key="link.text" :to="link.to" link @click.stop="drawer = !drawer">
+          <v-list-item-icon>
+            <v-icon class="white--text">{{ link.icon }}</v-icon>
+          </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>Dashboard</v-list-item-title>
+            <v-list-item-title class="white--text">{{ link.text }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+</v-list>
 
-        <v-list-item link :to="{name:'/Settings'}">
-          <v-list-item-action >
-            <v-icon>mdi-settings</v-icon>
-          </v-list-item-action>
-          <v-list-item-content >
-            <v-list-item-title>Settings </v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
+
     </v-navigation-drawer>
 
     <v-app-bar
             app
             clipped-left
-            src="https://picsum.photos/seed/picsum/1920/1080"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>Alpha App</v-toolbar-title>
     </v-app-bar>
 
+
     <v-content>
-      <v-container
-              class="fill-height"
-              fluid
-      >
-        <v-row
-                align="center"
-                justify="center"
-        >
-          <v-col class="shrink">
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                        :href="source"
-                        icon
-                        large
-                        target="_blank"
-                        v-on="on"
-                >
-                  <v-icon large>mdi-code-tags</v-icon>
-                </v-btn>
-              </template>
-              <span>Source</span>
-            </v-tooltip>
-            <v-tooltip right>
-              <template v-slot:activator="{ on }">
-                <v-btn
-                        icon
-                        large
-                        href="https://codepen.io/johnjleider/pen/bXNzZL"
-                        target="_blank"
-                        v-on="on"
-                >
-                  <v-icon large>mdi-codepen</v-icon>
-                </v-btn>
-              </template>
-              <span>Codepen</span>
-            </v-tooltip>
-          </v-col>
-        </v-row>
-      </v-container>
+          <router-view></router-view>
+
+          
     </v-content>
+    
+
 
     <v-footer app>
-      <span>&copy; 2019</span>
+      <span>&copy; 2019 Team Alpha</span>
     </v-footer>
   </v-app>
 </template>
@@ -98,5 +56,16 @@
     created () {
       this.$vuetify.theme.dark = true
     },
+  
+
+    data(){
+      return{
+        drawer: false,
+        links: [
+        { icon: 'mdi-view-dashboard', text: 'Dashboard', to: "/" },
+        { icon: 'mdi-account', text: 'Login', to: "/login" },
+      ]
+      }
+    }
   }
 </script>
