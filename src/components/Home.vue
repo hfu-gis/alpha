@@ -1,9 +1,9 @@
 <template>
     <div>
         <!-- Background Video -->
-        <video autoplay muted loop id="backgroundVideo">
+        <!-- <video autoplay muted loop id="backgroundVideo">
             <source src="video-dna.mp4" type="video/mp4">
-        </video>
+        </video> -->
 
         <!-- Login Formular -->
         <form class="box" action="login.html" method="post">
