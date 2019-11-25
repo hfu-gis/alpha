@@ -11,6 +11,7 @@
                     <v-col
                             v-for="(item, i) in items"
                             :key="i"
+                            cols= "12" sm= "4"
                             
                     >
                         <v-card
@@ -57,7 +58,9 @@
                     </v-col>
                 </v-row>
             </v-container>
-            <v-btn>Logut</v-btn>
+            <v-btn class="logout" fab dark large color="cyan">
+                <v-icon dark>mdi-off</v-icon>
+                Logut</v-btn>
         </v-app>
 
 
