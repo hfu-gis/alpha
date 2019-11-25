@@ -10,6 +10,9 @@
       <router-link to="/registrierung">Registrierung</router-link>
       <br>
       <router-link to="/module">Module</router-link>
+      <br>
+      <router-link to="/settings">Einstellungen</router-link>
+
 
       <router-view></router-view>
     </v-content>
