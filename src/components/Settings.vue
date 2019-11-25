@@ -11,7 +11,7 @@
                     <v-col
                             v-for="(item, i) in items"
                             :key="i"
-                            cols="12"
+                            
                     >
                         <v-card
                                 class="mx-auto"
@@ -32,9 +32,6 @@
 
                                     <v-card-subtitle v-text="item.subtext"></v-card-subtitle>
                                     <v-card-actions>
-                                        <v-btn text>Share</v-btn>
-
-
 
                                         <v-spacer></v-spacer>
 
@@ -60,6 +57,7 @@
                     </v-col>
                 </v-row>
             </v-container>
+            <v-btn>Logut</v-btn>
         </v-app>
 
 
@@ -75,6 +73,7 @@ export default {
     items: [
                 {
                     color: '#1F7087',
+                    
                     src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
                     title: 'Benachrichtigungen',
                     subtext: 'Hier kannst du bearbeiten wie du benachrichtigt werden willst!',
@@ -90,8 +89,8 @@ export default {
                 {
                     color: '#1F7087',
                     src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
-                    title: 'Benachrichtigungen',
-                    subtext: 'Hier kannst du bearbeiten wie du benachrichtigt werden willst!',
+                    title: 'Benachrichtigungen2',
+                    subtext: 'Hier kannst du bearbeiten wie du benachrichtigt werden willst!2',
                     text:'Hallo'
                 },
             ],
