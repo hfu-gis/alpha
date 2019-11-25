@@ -119,7 +119,7 @@
                     src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
                     title: 'Materialien',
                     subtext: 'anzeigen',
-                    text:'Hallo'
+                    text:'Hal'
                 },
                 {
                     color: '#952175',
