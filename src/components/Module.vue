@@ -1,71 +1,27 @@
 
 <template>
-    <div id="app">
+    <div id="app" >
+        <h1>Module</h1>
         <v-app id="inspire">
             <v-container>
                 <v-row dense>
-                    <v-col cols="12">
-
-                        <v-card
-                                class="mx-auto"
-                                max-width="344"
-                                dark
-                        >
-                            <v-img
-                                    src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                                    height="200px"
-                            ></v-img>
-
-                            <v-card-title>
-                                Skripte
-                            </v-card-title>
-
-                            <v-card-subtitle>
-                                Lade dir die Skripte herunter
-                            </v-card-subtitle>
-
-                            <v-card-actions>
-                                <v-btn text>Share</v-btn>
-
-
-
-                                <v-spacer></v-spacer>
-
-                                <v-btn
-                                        icon
-                                        @click="show = !show"
-                                >
-                                    <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                                </v-btn>
-                            </v-card-actions>
-
-                            <v-expand-transition>
-                                <div v-show="show">
-                                    <v-divider></v-divider>
-
-                                    <v-card-text>
-                                        Dateien
-                                    </v-card-text>
-                                </div>
-                            </v-expand-transition>
-
-
-                        </v-card>
-                    </v-col>
+                   
                     <v-col
                             v-for="(item, i) in items"
                             :key="i"
-                            cols="12"
+                            
+                            
                     >
                         <v-card
                                 class="mx-auto"
                                 max-width="344"
                                 :color="item.color"
                                 dark
+                                
                         >
                             <v-img
                                     :src="item.src"
-                                    height="200px">
+                                    height="400px">
                             </v-img>
                             <div >
                                 <div>
@@ -76,28 +32,27 @@
 
                                     <v-card-subtitle v-text="item.subtext"></v-card-subtitle>
                                     <v-card-actions>
-                                        <v-btn text>Share</v-btn>
 
+                                    <v-expansion-panels
+                                      v-model="panel"
+                                        
+                                        
 
-
-                                        <v-spacer></v-spacer>
-
-                                        <v-btn
-                                                icon
-                                                @click="show = !show"
+                                    >
+                                        <v-expansion-panel >
+                                        <v-expansion-panel-header>Mehr Anzeigen</v-expansion-panel-header>
+                                        <v-expansion-panel-content
+                                            class=" body-2 text-center"
+                                            v-text="item.text"
+                                            
                                         >
-                                            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                                        </v-btn>
+                                           
+                                        </v-expansion-panel-content>
+                                        </v-expansion-panel>
+                                    </v-expansion-panels>
+  
+
                                     </v-card-actions>
-                                    <v-expand-transition>
-                                        <div v-show="show">
-                                            <v-divider></v-divider>
-
-                                            <v-card-text class="Text" v-text="item.text">
-
-                                            </v-card-text>
-                                        </div>
-                                    </v-expand-transition>
                                 </div>
                             </div>
                         </v-card>
@@ -109,24 +64,47 @@
 </template>
 
 <script>
+
     export default {
         name: 'Module',
         data: () => ({
             show:false,
+            
+        
+            
+            
             items: [
                 {
-                    color: '#1F7087',
-                    src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+                    color:'#FF8A80', 
+                    src: require('@/assets/Modul1.jpg'),
+                    title:'Skripte',
+                    subtext:'',
+                    text:'Dateien',
+                    
+                    
+                    
+                    
+                   
+                },
+                     
+                {
+                    color: '#FF5252',
+                    src: require('@/assets/Modul2.jpg'),
                     title: 'Materialien',
-                    subtext: 'anzeigen',
-                    text:'Hal'
+                    subtext: '',
+                     text:'Java'
+                    
+                    
                 },
                 {
-                    color: '#952175',
-                    src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
+                    color: '#FF1744',
+                    src: require('@/assets/Modul3.jpg'),
                     title: 'Kontakte',
-                    subtext: 'Kontakte',
-                    text:'hallo'
+                    subtext: '',
+                    text:'E-Mail',
+                    
+                   
+                    
                 },
             ],
         }),
@@ -135,4 +113,5 @@
 
 <style scoped>
     /* CSS für diese Seite hier einfügen */
+    
 </style>
