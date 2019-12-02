@@ -34,24 +34,22 @@
                                     <v-card-subtitle v-text="item.subtext"></v-card-subtitle>
                                     <v-card-actions>
 
-                                        <v-spacer></v-spacer>
+                                        <v-expansion-panels v-model="panel">
 
-                                        <v-btn
-                                                icon
-                                                @click="show = !show"
-                                        >
-                                            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                                        </v-btn>
+                                            <v-expansion-panel>
+                                                <v-expansion-panel-header>Mehr Anzeigen</v-expansion-panel-header>
+                                                <v-expansion-panel-content
+                                                class="body-2 text-center"
+                                                v-text="item.text"
+                                                
+                                                >
+
+                                                </v-expansion-panel-content>
+                                            </v-expansion-panel>
+                                        </v-expansion-panels>
+
                                     </v-card-actions>
-                                    <v-expand-transition>
-                                        <div v-show="show">
-                                            <v-divider></v-divider>
-
-                                            <v-card-text class="Text" v-text="item.text">
-
-                                            </v-card-text>
-                                        </div>
-                                    </v-expand-transition>
+                                
                                 </div>
                             </div>
                         </v-card>
@@ -84,25 +82,24 @@ export default {
     items: [
                 {
                     color: '#1F7087',
-                    
-                    src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
+                    src: require('@/assets/Settings1_benachrichtigungen.jpg'),
                     title: 'Benachrichtigungen',
-                    subtext: 'Hier kannst du bearbeiten wie du benachrichtigt werden willst!',
+                    subtext: 'Hier kannst du bearbeiten wie du bei Änderungen benachrichtigt werden willst!',
                     text:'Hallo'
                     
                 },
                 {
                     color: '#952175',
-                    src: 'https://cdn.vuetifyjs.com/images/cards/halcyon.png',
-                    title: 'Kontakte',
-                    subtext: 'Kontakte',
+                    src: require('@/assets/Settings2_kontakt.jpg'),
+                    title: 'Kontakt',
+                    subtext: 'Du würdest gerne mit uns Kontakt aufnehmen?',
                     text:'hallo'
                 },
                 {
-                    color: '#1F7087',
-                    src: 'https://cdn.vuetifyjs.com/images/cards/foster.jpg',
-                    title: 'Benachrichtigungen2',
-                    subtext: 'Hier kannst du bearbeiten wie du benachrichtigt werden willst!2',
+                    color: '#2E8B57',
+                    src: require('@/assets/Settings3_profil.jpg'),
+                    title: 'Profil',
+                    subtext: 'Hier kannst du dein Profil bearbeiten. Zeig wer du bist!',
                     text:'Hallo'
                 },
             ],
