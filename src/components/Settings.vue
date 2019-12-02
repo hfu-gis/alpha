@@ -11,6 +11,7 @@
                     <v-col
                             v-for="(item, i) in items"
                             :key="i"
+                            cols= "12" sm= "4"
                             
                     >
                         <v-card
@@ -57,7 +58,17 @@
                     </v-col>
                 </v-row>
             </v-container>
-            <v-btn>Logut</v-btn>
+            <div class="text-center">
+            <v-btn 
+            link to="/"
+            rounded
+            class="logout" 
+            color="red" dark
+            >Logout
+        <v-icon dark right>mdi-cancel</v-icon>
+        
+      </v-btn>
+            </div>
         </v-app>
 
 
@@ -78,6 +89,7 @@ export default {
                     title: 'Benachrichtigungen',
                     subtext: 'Hier kannst du bearbeiten wie du benachrichtigt werden willst!',
                     text:'Hallo'
+                    
                 },
                 {
                     color: '#952175',
