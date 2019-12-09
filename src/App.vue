@@ -12,6 +12,8 @@
       <router-link to="/module">Module</router-link>
       <br>
       <router-link to="/settings">Einstellungen</router-link>
+      <br>
+      <router-link to="/Calendar">Kalender</router-link>
 
 
       <router-view></router-view>
