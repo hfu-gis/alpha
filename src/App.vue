@@ -24,7 +24,5 @@ export default {
 </script>
 
 <style scoped>
-  .container-app {
-    background-color: rgb(43, 43, 43);
-  }
+  
 </style>

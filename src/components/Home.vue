@@ -26,6 +26,7 @@
                </v-col>
            </v-row>
            <v-btn class="login-button" rounded outlined color="red" large>Login</v-btn>
+           <v-btn class="kontakt-button" rounded outlined color="red" large href="/kontaktformular">Kontakt</v-btn>
        </v-container>
    </v-form>
 </div>
