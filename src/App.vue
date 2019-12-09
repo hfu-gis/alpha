@@ -2,7 +2,7 @@
   <v-app class="container-app">
     <v-content>
       <Navigation></Navigation>
-      
+
       <router-view></router-view>
     </v-content>
   </v-app>
@@ -24,5 +24,7 @@ export default {
 </script>
 
 <style scoped>
-  
+  .container-app {
+    background-color: rgb(43, 43, 43);
+  }
 </style>

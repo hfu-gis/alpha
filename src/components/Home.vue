@@ -1,6 +1,9 @@
 <template>
 <div class="page-container">
-    <v-form v-model="valid">
+    <video autoplay muted loop id="dnaBackground">
+        <source src="../assets/dna.mp4" type="video/mp4">
+    </video>
+    <v-form v-model="valid" class="formular-wrapper">
        <v-container class="form-container">
            <h1>ALPHA</h1>
            <v-row class="field-email">
@@ -24,9 +27,7 @@
            </v-row>
            <v-btn class="login-button" rounded outlined color="red" large>Login</v-btn>
        </v-container>
-
    </v-form>
-
 </div>
 </template>
 
@@ -46,17 +47,24 @@ export default {
 </script>
 
 <style scoped>
-    
+    #dnaBackground {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+     }
 
     .form-container {
         display: flex;
         flex-direction: column;
+        position: relative;
         align-items: center;
-        background: white;
         width: 37%;
-        padding: 20px 0 40px 0;
         margin-top: 100px;
+        padding: 20px 0 40px 0;
         border: 2px solid red;
+        background: white;
     }
 
     .field-email {
