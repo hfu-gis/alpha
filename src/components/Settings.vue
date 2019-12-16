@@ -34,7 +34,21 @@
                                     <v-card-subtitle v-text="item.subtext"></v-card-subtitle>
                                     <v-card-actions>
 
-                                        <v-expansion-panels v-model="panel">
+                                        <div clas=row>
+
+                                        <a v-bind:href="link"> test
+                                            <!-- <v-btn
+                                            v-text= "item.text" > 
+                                        </v-btn>-->
+                                        </a>
+                                        </div>
+
+                                        
+
+                                        
+                                        
+
+                                        <!-- <v-expansion-panels v-model="panel">
 
                                             <v-expansion-panel>
                                                 <v-expansion-panel-header>Mehr Anzeigen</v-expansion-panel-header>
@@ -46,7 +60,7 @@
 
                                                 </v-expansion-panel-content>
                                             </v-expansion-panel>
-                                        </v-expansion-panels>
+                                        </v-expansion-panels> -->
 
                                     </v-card-actions>
                                 
@@ -79,13 +93,16 @@ export default {
     data:()=>({
         show:false,
 
+    
+
     items: [
                 {
                     color: '#1F7087',
                     src: require('@/assets/Settings1_benachrichtigungen.jpg'),
                     title: 'Benachrichtigungen',
                     subtext: 'Hier kannst du bearbeiten wie du bei Änderungen benachrichtigt werden willst!',
-                    text:'Hallo'
+                    text:'test btn1',
+                    link: '/Module'
                     
                 },
                 {
@@ -93,7 +110,8 @@ export default {
                     src: require('@/assets/Settings2_kontakt.jpg'),
                     title: 'Kontakt',
                     subtext: 'Du würdest gerne mit uns Kontakt aufnehmen?',
-                    text:'hallo'
+                    text:'test btn2',
+                    to: '/Home'
                 },
                 {
                     color: '#2E8B57',

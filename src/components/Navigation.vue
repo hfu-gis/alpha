@@ -6,7 +6,7 @@
             <router-link to="/registrierung">Registrierung</router-link>
             <router-link to="/module">Module</router-link>
             <router-link to="/kontaktformular">Kontaktformular</router-link>
-            <router-link to="/settings">Einstellungen</router-link>
+            <router-link to="/settings" ><v-icon left color="white">mdi-wrench</v-icon> Einstellungen </router-link>
             <router-link to="/Calendar">Kalender</router-link>
             </div>
         </nav>
