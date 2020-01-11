@@ -25,8 +25,10 @@
                    ></v-text-field>
                </v-col>
            </v-row>
-           <v-btn class="login-button" rounded outlined color="red" large>Login</v-btn>
-           <v-btn class="kontakt-button" rounded outlined color="red" large href="/kontaktformular">Kontakt</v-btn>
+           <p>Noch keinen Account?<br>
+                <span style="text-decoration: underline;"><a href="/registrierung">Hier regsitrieren!</a></span>
+           </p>
+           <v-btn rounded outlined color="red" large>Login</v-btn>
        </v-container>
    </v-form>
 </div>
