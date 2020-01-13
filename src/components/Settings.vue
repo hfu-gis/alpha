@@ -1,7 +1,4 @@
 <template>
-    
-         
-
  <div id="app">
      <h1>Einstellungen</h1> 
         <v-app id="inspire">
@@ -43,10 +40,6 @@
                                         </a>
                                         </div>
 
-                                        
-
-                                        
-                                        
 
                                         <!-- <v-expansion-panels v-model="panel">
 
@@ -82,8 +75,6 @@
       </v-btn>
             </div>
         </v-app>
-
-
 </div>
 </template>
 
@@ -92,8 +83,6 @@ export default {
     name: 'Settings',
     data:()=>({
         show:false,
-
-    
 
     items: [
                 {
@@ -126,5 +115,5 @@ export default {
 </script>
 
 <style scoped>
-
+    
 </style>
