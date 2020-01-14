@@ -14,7 +14,7 @@
                 <h3> Klicke hier um uns direkt zu schreiben:</h3>
                 </v-col>
             <v-col cols="12" class="text-center">
-                <v-btn class="button" rounded outlined color="red" large>Alpha-Mail</v-btn>
+                <v-btn class="button" rounded outlined color="red" large><a id="a" href="mailto:info@gibtsgarnicht.de">Alpha-Mail</a></v-btn>
             </v-col>
         </v-card>
 
@@ -73,5 +73,8 @@ export default {
         bottom: 0;
         min-width: 100%;
         min-height: 100%;
+     }
+     #a{
+         text-decoration: none;
      }
 </style>
