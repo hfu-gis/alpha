@@ -1,6 +1,10 @@
 <template>
  <div id="app">
-     <h1>Einstellungen</h1> 
+     <v-row justify="center" cols="12">
+            <v-col cols="12" class="text-center">
+                <h1>Einstellungen</h1>
+            </v-col>
+        </v-row> 
         <v-app id="inspire">
             <v-container>
                 <v-row dense>
@@ -33,11 +37,11 @@
 
                                         <div clas=row>
 
-                                        <a v-bind:href="link"> test
-                                            <!-- <v-btn
+                                        <!-- <a v-bind:href="link"> test
+                                            <v-btn
                                             v-text= "item.text" > 
-                                        </v-btn>-->
-                                        </a>
+                                        </v-btn>
+                                        </a>-->
                                         </div>
 
 
@@ -63,7 +67,7 @@
                     </v-col>
                 </v-row>
             </v-container>
-            <div class="text-center">
+            <div class="text-center mt-8">
             <v-btn 
             link to="/"
             rounded
@@ -98,7 +102,7 @@ export default {
                     color: '#952175',
                     src: require('@/assets/Settings2_kontakt.jpg'),
                     title: 'Kontakt',
-                    subtext: 'Du würdest gerne mit uns Kontakt aufnehmen?',
+                    subtext: 'Du würdest gerne mit uns Kontakt aufnehmen? Gerne! Nutze einfach unser Kontaktformular.',
                     text:'test btn2',
                     to: '/Home'
                 },

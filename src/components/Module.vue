@@ -1,7 +1,12 @@
 
 <template>
     <div id="app" >
-        <h1>Module</h1>
+        <v-row justify="center" cols="12">
+            <v-col cols="12" class="text-center">
+                <h1>Module</h1>
+            </v-col>
+        </v-row>
+        
         <v-app id="inspire">
             <v-container>
                 <v-row dense>

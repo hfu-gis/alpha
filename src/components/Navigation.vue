@@ -6,7 +6,7 @@
             <router-link to="/registrierung">Registrierung</router-link>
             <router-link to="/module">Module</router-link>
             <router-link to="/kontaktformular">Kontaktformular</router-link>
-            <router-link to="/settings" ><v-icon left color="white">mdi-wrench</v-icon> Einstellungen </router-link>
+            <router-link to="/settings" > Einstellungen </router-link>
             <router-link to="/Calendar">Kalender</router-link>
             </div>
         </nav>
@@ -33,7 +33,7 @@ export default {
 
     .main-navigation a {
         color: white;
-        font-size: 30px;
+        font-size: 20px;
         text-decoration: none;
         padding: 0 20px 0 20px;
     }

@@ -1,7 +1,7 @@
 <template>
     <div>
     <v-form v-model="valid">
-       <v-container class="wrapper">
+       <v-container class="wrapper mt-8" >
            <h1 class="text-center">Hier kannst Du einen Account erstellen!</h1>
            <div class="wrapper-form">
                <v-row>
@@ -52,7 +52,7 @@
 
 <script>
 export default {
-    name: 'Registrierung',
+    name: 'registrierung',
     data: () => ({
         valid: false,
         password: '',

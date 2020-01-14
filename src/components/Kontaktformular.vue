@@ -1,86 +1,77 @@
 <template>
-    <div class="body-1">>
-        <h1>Kontaktformular</h1>
-        <br>
-            <div>
-                <h2> Kontaktere uns, TeamAlpha!</h2>
-                <br>
 
+<v-row>
+    <v-row justify="center" cols="12">
+        <v-col cols="12" class="text-center">
+            <h1>Kontaktformular</h1>
+        </v-col>
+        <v-col cols="12" class="text-center">
+            <h2>Kontaktere uns, TeamAlpha!</h2>
+        </v-col>
+        
+        <v-card cols="8" min-width="50%">
+            <v-col cols="12" class="text-center">
                 <h3> Klicke hier um uns direkt zu schreiben:</h3>
-                <br>
-            </div>
-            
-                <a href="support@mail.alpha">
-                    <v-btn text outlined shaped   
-                            oneclick="e-mail">Alpha-Mail
-                    
-                    </v-btn>
-                </a>
-            
-            <h3>oder fülle unser Kontaktformular aus:</h3>
-            <br>
-            <h4> Deine E-Mail-Adresse</h4>
-            
-            <div>
-            <input type="Text" name="AdressBox" id="adressBox" placeholder= " Email-Adresse">
-            </div>
-            <h4> Deine Nachricht</h4>
-            <input type="Text" name="TextBox" id="textBox" placeholder="...">
+                </v-col>
+            <v-col cols="12" class="text-center">
+                <v-btn class="button" rounded outlined color="red" large>Alpha-Mail</v-btn>
+            </v-col>
+        </v-card>
 
-            <v-btn text outlined shaped
-                   oneclick="absenden">absenden
-            </v-btn>
-    </div>
+        <v-col cols="12" class="text-center">
+            <h3> ...oder...</h3>
+        </v-col>
+
+         <v-card cols="8" class="mb-8" min-width="50%">
+            <v-col cols="12" class="text-center">
+                <h3> fülle unser Kontaktformular aus:</h3>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <v-text-field v-model="email" placeholder="Deine Email-Adresse"></v-text-field>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                <v-textarea v-model="message" placeholder="Deine Nachricht"></v-textarea>
+            </v-col>
+            <v-col cols="12" class="text-center">
+                 <v-btn class="button" rounded outlined color="red" large @click="send">Senden</v-btn>
+            </v-col>
+        </v-card>
+    </v-row>
+</v-row>
 
     
-</template>
 
+
+
+
+
+</template>
 <script>
 export default {
-    name: 'Kontaktformular'
+    name: 'Kontaktformular',
+    data:() => {
+        return {
+            email: "",
+            message: ""
+        }
+    },
+    methods: {
+        send(){
+            this.email = "";
+            this.message = "";
+            alert("Danke für deine Nachricht!")
+        }
+    }
   
 } 
 </script>
 
 <style scoped>
-    h1 {text-align: center;}
-    h2 {text-align: center;}
-    h3 {text-align: center;}
-    h4 {text-align: center;}
-    
-    #adressBox {  
-            
-        text-align: center;
-        margin: 30px auto 0;
-        display: block;
-        width: 300px;
-        height: 40px;
-        font-size: 30px;
-        background: darkslategray;
-        border-radius: 8px;
-        color: white;
-        
-        
-    }
-    #textBox {      
-        text-align:left top;
-        margin: auto;
-        display: block;
-        width: 300px;
-        height: 100px;
-        font-size: 30px;
-        background: darkslategray;
-        border-radius: 8px;
-        color: white;
-
-        /* <v-textarea
-        v-model="bio"
-        auto-grow
-        filled
-        color="deep-purple"
-        label="Bio"
-        rows="1"
-      ></v-textarea> */
-        
-    }
+    #dnaBackground {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+     }
 </style>
