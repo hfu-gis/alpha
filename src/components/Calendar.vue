@@ -3,10 +3,10 @@
     <v-col>
       <v-sheet height="64">
         <v-toolbar flat color="white">
-          <v-btn color="primary" dark @click.stop="dialog = true">
+          <v-btn color="#000000" dark @click.stop="dialog = true">
             New Event
           </v-btn>
-          <v-btn outlined class="mr-4" @click="setToday">
+          <v-btn dark color="#000000" class="mr-4" @click="setToday">
             Today
           </v-btn>
           <v-btn fab text small @click="prev">
@@ -19,7 +19,7 @@
           <div class="flex-grow-1"></div>
           <v-menu bottom right>
             <template v-slot:activator="{ on }">
-              <v-btn outlined v-on="on">
+              <v-btn outlined  v-on="on">
                 <span>{{ typeToLabel[type] }}</span>
                 <v-icon right>mdi-menu-down</v-icon>
               </v-btn>
