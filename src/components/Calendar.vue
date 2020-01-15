@@ -51,7 +51,7 @@
               <v-text-field v-model="start" type="date" label="start (required)"></v-text-field>
               <v-text-field v-model="end" type="date" label="end (required)"></v-text-field>
               <v-text-field v-model="color" type="color" label="color (click to open color menu)"></v-text-field>
-              <v-btn type="submit" color="#000000" class="mr-4" @click.stop="dialog = false">
+              <v-btn type="submit" dark color="#000000" class="mr-4" @click.stop="dialog = false">
                 create event
               </v-btn>
             </v-form>
