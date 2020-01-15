@@ -77,7 +77,6 @@
       </v-dialog>
 
 <v-sheet height="600">
-  <!-- Zeiz noch Hinzufügen-->
   <v-calendar
   ref="calendar"
   v-model="focus"
@@ -126,9 +125,6 @@
   <v-card-actions>
     <v-btn text color="secondary" @click="selectedOpen = false">
       close
-    </v-btn>
-    <v-btn text color="secondary" href="http://localhost:8080/module">
-      Module
     </v-btn>
     <v-btn v-if="currentlyEditing !== selectedEvent.id" text @click.prevent="editEvent(selectedEvent)">
       edit
@@ -261,8 +257,8 @@ export default {
       await db.collection('calEvent').doc(this.currentlyEditing).update({
         details: ev.details
       })
-      this.selectedOpen = false;
-      this.currentlyEditing = null;
+      this.selectedOpen = false,
+      this.currentlyEditing = null
     },
     async deleteEvent (ev) {
       await db.collection("calEvent").doc(ev).delete()
@@ -284,8 +280,8 @@ export default {
       nativeEvent.stopPropagation()
     },
     updateRange ({ start, end }) {
-      this.start = start;
-      this.end = end;
+      this.start = start
+      this.end = end
     },
     nth (d) {
       return d > 3 && d < 21
