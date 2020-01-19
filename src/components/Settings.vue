@@ -1,123 +1,80 @@
 <template>
- <div id="app">
-     <v-row justify="center" cols="12">
-            <v-col cols="12" class="text-center">
-                <h1>Einstellungen</h1>
-            </v-col>
-        </v-row> 
-        <v-app id="inspire">
-            <v-container>
-                <v-row dense>
-                   
-                    <v-col
-                            v-for="(item, i) in items"
-                            :key="i"
-                            cols= "12" sm= "4"
-                            
-                    >
-                        <v-card
-                                class="mx-auto"
-                                max-width="344"
-                                :color="item.color"
-                                dark
-                        >
-                            <v-img
-                                    :src="item.src"
-                                    height="200px">
-                            </v-img>
-                            <div >
-                                <div>
-                                    <v-card-title
-                                            class="headline"
-                                            v-text="item.title"
-                                    ></v-card-title>
+    <v-row cols="12">
+        <v-col cols="12">
+            <v-row justify="center" cols="12">
+                <v-col cols="12" class="text-center">
+                    <h1>Einstellungen</h1>
+                </v-col>
+            </v-row>
 
-                                    <v-card-subtitle v-text="item.subtext"></v-card-subtitle>
-                                    <v-card-actions>
-
-                                        <div clas=row>
-
-                                        <!-- <a v-bind:href="link"> test
-                                            <v-btn
-                                            v-text= "item.text" > 
-                                        </v-btn>
-                                        </a>-->
-                                        </div>
-
-
-                                        <!-- <v-expansion-panels v-model="panel">
-
-                                            <v-expansion-panel>
-                                                <v-expansion-panel-header>Mehr Anzeigen</v-expansion-panel-header>
-                                                <v-expansion-panel-content
-                                                class="body-2 text-center"
-                                                v-text="item.text"
-                                                
-                                                >
-
-                                                </v-expansion-panel-content>
-                                            </v-expansion-panel>
-                                        </v-expansion-panels> -->
-
-                                    </v-card-actions>
-                                
-                                </div>
-                            </div>
-                        </v-card>
+            <v-row justify="center" cols="12">
+                <v-col cols="12" class="text-center">
+                    <v-avatar size="10em" id="Aang">
+                    </v-avatar>
+                </v-col>
+            </v-row>
+            
+            <v-row justify="center" cols="12">
+                <v-card cols="12" class="mb-8" min-width="50%">
+                    <v-col cols="12" class="text-center">
+                        <h3> Ändere deine Profildaten!</h3>
                     </v-col>
-                </v-row>
-            </v-container>
-            <div class="text-center mt-8">
-            <v-btn 
-            link to="/"
-            rounded
-            class="logout" 
-            color="red" dark
-            >Logout
-        <v-icon dark right>mdi-cancel</v-icon>
-        
-      </v-btn>
-            </div>
-        </v-app>
-</div>
+                    <v-col cols="12" class="text-start">
+                        <span>Dein Name ist: {{firstname}} {{lastname}}</span>
+                    </v-col>
+                    <v-col cols="12" class="text-center">
+                        <v-text-field v-model="first" placeholder="Dein neuer Vorname:"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" class="text-center">
+                        <v-text-field v-model="last" placeholder="Dein neuer Nachname:"></v-text-field>
+                    </v-col>
+
+
+                    <v-col cols="12" class="text-start">
+                        <span>Deine Email ist: {{email}}</span>
+                    </v-col>
+                    <v-col cols="12" class="text-center">
+                        <v-text-field v-model="last" placeholder="Deine neuere Email:"></v-text-field>
+                    </v-col>
+
+
+                    <v-col cols="12" class="text-center">
+                        <v-btn class="button" rounded outlined color="red" large @click="change">ändern</v-btn>
+                    </v-col>
+                </v-card>
+             </v-row>
+        </v-col>
+    </v-row>
 </template>
 
-<script>
-export default {
-    name: 'Settings',
-    data:()=>({
-        show:false,
+<style scoped>
+#Aang{
+    background-image: url("../assets/Settings3_profil.jpg");
+    background-size: 100%;
+}
 
-    items: [
-                {
-                    color: '#1F7087',
-                    src: require('@/assets/Settings1_benachrichtigungen.jpg'),
-                    title: 'Benachrichtigungen',
-                    subtext: 'Hier kannst du bearbeiten wie du bei Änderungen benachrichtigt werden willst!',
-                    text:'test btn1',
-                    link: '/Module'
-                    
-                },
-                {
-                    color: '#952175',
-                    src: require('@/assets/Settings2_kontakt.jpg'),
-                    title: 'Kontakt',
-                    subtext: 'Du würdest gerne mit uns Kontakt aufnehmen? Gerne! Nutze einfach unser Kontaktformular.',
-                    text:'test btn2',
-                    to: '/Home'
-                },
-                {
-                    color: '#2E8B57',
-                    src: require('@/assets/Settings3_profil.jpg'),
-                    title: 'Profil',
-                    subtext: 'Hier kannst du dein Profil bearbeiten. Zeig wer du bist!',
-                    text:'Hallo'
-                },
-            ],
-    }),
+</style>
+
+<script>
+export default  {
+    name: "Settings",
+   data:() => {
+        return {
+            firstname: "Tobi",
+            lastname: "Fuwa Facking Fischer",
+            first:"",
+            last:"",
+            email:"Tobi@Fischer.de",
+            newEmail:""
+    
+        }
+    },
+    methods: {
+        change(){
+            this.firstname=this.first
+            this.lastname=this.last
+            this.email=this.newEmail
+        }    
+    }
 }
 </script>
-
-<style scoped>
-    
-</style>
