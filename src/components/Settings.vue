@@ -1,4 +1,5 @@
 <template>
+<!-- Überschrift -->
     <v-row cols="12">
         <v-col cols="12">
             <v-row justify="center" cols="12">
@@ -7,35 +8,42 @@
                 </v-col>
             </v-row>
 
+            <!-- Avatar = Rundes Bild -->
             <v-row justify="center" cols="12">
                 <v-col cols="12" class="text-center">
                     <v-avatar size="10em" id="Aang">
                     </v-avatar>
                 </v-col>
             </v-row>
-            
+
+            <!-- Einfache Überschrift -->
             <v-row justify="center" cols="12">
                 <v-card cols="12" class="mb-8" min-width="50%">
                     <v-col cols="12" class="text-center">
                         <h3> Ändere deine Profildaten!</h3>
                     </v-col>
-                   
+
+                    <!-- Feld-Überschrift + Nachkontrolle von letzter Änderung -->
                     <v-col cols="12" class="text-start">
                         <span>Dein Name ist: {{firstname}} {{lastname}}</span>
                     </v-col>
                    
+                   <!-- Textfeld -->
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="first" placeholder="Dein neuer Vorname:"></v-text-field>
                     </v-col>
                   
+                  <!-- Textfeld -->
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="last" placeholder="Dein neuer Nachname:"></v-text-field>
                     </v-col>
 
+                    <!-- Textfeld -->
                     <v-col cols="12" class="text-start">
                         <span>Deine Email ist: {{email}}</span>
                     </v-col>
                    
+                   <!-- Feld-Überschrift + Nachkontrolle von letzter Änderung -->
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="newEmail" placeholder="Deine neue Email:"></v-text-field>
                     </v-col>
@@ -43,7 +51,8 @@
                     <v-col cols="12" class="text-start">
                         <span>Passwort ändern:</span>
                     </v-col>
-                   
+
+                   <!-- Passwort (PW) anpassen + Kontrolle der Eingabe durch Klicken auf Icon + error falls Eingabe nicht korrekt-->
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="pwOld" :append-icon="showOld ? 'mdi-eye' : 'mdi-eye-off'" :type="showOld ? 'text' : 'password'" @click:append="showOld = !showOld" :error-messages="error" @input="checkPw" placeholder="Dein altes Passwort:"></v-text-field>
                     </v-col>
@@ -56,6 +65,7 @@
                         <v-text-field v-model="pwNewTwo" :append-icon="showNewTwo ? 'mdi-eye' : 'mdi-eye-off'" :type="showNewTwo ? 'text' : 'password'" @click:append="showNewTwo = !showNewTwo" :error-messages="error" labe="password" @input="checkPW" placeholder="Dein neues Passwort wiederholen:"></v-text-field>
                     </v-col>
 
+                    <!-- Button erst funktional wenn PW-Kontrolle = korrekt -->
                     <v-col cols="12" class="text-center">
                         <v-btn class="button" rounded outlined color="red" large @click="change" :disabled="!validat">ändern</v-btn>
                     </v-col>
@@ -65,6 +75,8 @@
     </v-row>
 </template>
 
+<!-- Style -->
+<!-- Image im Avatar -->
 <style scoped>
 #Aang{
     background-image: url("../assets/Settings3_profil.jpg");
@@ -72,6 +84,8 @@
 }
 </style>
 
+<!-- Skript -->
+<!-- Felder + PW Check -->
 <script>
 export default  {
     name: "Settings",
