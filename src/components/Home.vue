@@ -53,7 +53,7 @@ export default {
     }),
     methods: {
         auth() {
-            alert("Hier")
+            alert("Funktioniert!")
             firebase.auth().signInWithEmailAndPassword(
                 this.email,
                 this.password
