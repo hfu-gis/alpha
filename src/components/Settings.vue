@@ -19,20 +19,23 @@
                     <v-col cols="12" class="text-center">
                         <h3> Ändere deine Profildaten!</h3>
                     </v-col>
+                   
                     <v-col cols="12" class="text-start">
                         <span>Dein Name ist: {{firstname}} {{lastname}}</span>
                     </v-col>
+                   
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="first" placeholder="Dein neuer Vorname:"></v-text-field>
                     </v-col>
+                  
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="last" placeholder="Dein neuer Nachname:"></v-text-field>
                     </v-col>
 
-
                     <v-col cols="12" class="text-start">
                         <span>Deine Email ist: {{email}}</span>
                     </v-col>
+                   
                     <v-col cols="12" class="text-center">
                         <v-text-field v-model="newEmail" placeholder="Deine neue Email:"></v-text-field>
                     </v-col>
@@ -40,18 +43,18 @@
                     <v-col cols="12" class="text-start">
                         <span>Passwort ändern:</span>
                     </v-col>
+                   
                     <v-col cols="12" class="text-center">
-                        <v-text-field v-model="pwOld" type="password" :error-messages="error" @input="checkPw" placeholder="Dein altes Passwort:"></v-text-field>
+                        <v-text-field v-model="pwOld" :append-icon="showOld ? 'mdi-eye' : 'mdi-eye-off'" :type="showOld ? 'text' : 'password'" @click:append="showOld = !showOld" :error-messages="error" @input="checkPw" placeholder="Dein altes Passwort:"></v-text-field>
                     </v-col>
+                   
                     <v-col cols="12" class="text-center">
-                        <v-text-field v-model="pwNewOne" :error-messages="error" labe="password" type="password" @input="checkPW" placeholder="Dein neues Passwort:"></v-text-field>
+                        <v-text-field v-model="pwNewOne" :append-icon="showNewOne ? 'mdi-eye' : 'mdi-eye-off'" :type="showNewOne ? 'text' : 'password'" @click:append="showNewOne = !showNewOne" :error-messages="error" labe="password"  @input="checkPW" placeholder="Dein neues Passwort:"></v-text-field>
                     </v-col>
+                   
                     <v-col cols="12" class="text-center">
-                        <v-text-field v-model="pwNewTwo" :error-messages="error" labe="password" type="password" @input="checkPW" placeholder="Dein neues Passwort wiederholen:"></v-text-field>
+                        <v-text-field v-model="pwNewTwo" :append-icon="showNewTwo ? 'mdi-eye' : 'mdi-eye-off'" :type="showNewTwo ? 'text' : 'password'" @click:append="showNewTwo = !showNewTwo" :error-messages="error" labe="password" @input="checkPW" placeholder="Dein neues Passwort wiederholen:"></v-text-field>
                     </v-col>
-
-                    
-
 
                     <v-col cols="12" class="text-center">
                         <v-btn class="button" rounded outlined color="red" large @click="change" :disabled="!validat">ändern</v-btn>
@@ -67,7 +70,6 @@
     background-image: url("../assets/Settings3_profil.jpg");
     background-size: 100%;
 }
-
 </style>
 
 <script>
@@ -86,8 +88,10 @@ export default  {
             pwNewTwo:"",
             validate: false,
             error: null,
-            
-    
+            showOld: false,
+            showNewOne: false,
+            showNewTwo: false,
+             
         }
     },
     methods: {
@@ -101,6 +105,7 @@ export default  {
             this.pwOld="";
             this.pwNewOne="";
             this.pwNewTwo="";
+
             alert("Deine Einstellungen wurden verändert!")
         },
         checkPW() {
@@ -123,7 +128,6 @@ export default  {
                 this.validat = true;
                 return true;
             },
-
         }    
     }
 

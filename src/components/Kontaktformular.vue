@@ -30,7 +30,7 @@
                 <v-text-field v-model="email" placeholder="Deine Email-Adresse"></v-text-field>
             </v-col>
             <v-col cols="12" class="text-center">
-                <v-textarea v-model="message" placeholder="Deine Nachricht"></v-textarea>
+                <v-textarea v-model="message" outlined placeholder="Deine Nachricht"></v-textarea>
             </v-col>
             <v-col cols="12" class="text-center">
                  <v-btn class="button" rounded outlined color="red" large @click="send">Senden</v-btn>
