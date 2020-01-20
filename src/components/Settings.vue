@@ -34,12 +34,27 @@
                         <span>Deine Email ist: {{email}}</span>
                     </v-col>
                     <v-col cols="12" class="text-center">
-                        <v-text-field v-model="last" placeholder="Deine neuere Email:"></v-text-field>
+                        <v-text-field v-model="newEmail" placeholder="Deine neue Email:"></v-text-field>
                     </v-col>
+
+                    <v-col cols="12" class="text-start">
+                        <span>Passwort ändern:</span>
+                    </v-col>
+                    <v-col cols="12" class="text-center">
+                        <v-text-field v-model="pwOld" type="password" :error-messages="error" @input="checkPw" placeholder="Dein altes Passwort:"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" class="text-center">
+                        <v-text-field v-model="pwNewOne" :error-messages="error" labe="password" type="password" @input="checkPW" placeholder="Dein neues Passwort:"></v-text-field>
+                    </v-col>
+                    <v-col cols="12" class="text-center">
+                        <v-text-field v-model="pwNewTwo" :error-messages="error" labe="password" type="password" @input="checkPW" placeholder="Dein neues Passwort wiederholen:"></v-text-field>
+                    </v-col>
+
+                    
 
 
                     <v-col cols="12" class="text-center">
-                        <v-btn class="button" rounded outlined color="red" large @click="change">ändern</v-btn>
+                        <v-btn class="button" rounded outlined color="red" large @click="change" :disabled="!validat">ändern</v-btn>
                     </v-col>
                 </v-card>
              </v-row>
@@ -61,11 +76,17 @@ export default  {
    data:() => {
         return {
             firstname: "Tobi",
-            lastname: "Fuwa Facking Fischer",
+            lastname: "Fischer",
             first:"",
             last:"",
             email:"Tobi@Fischer.de",
-            newEmail:""
+            newEmail:"",
+            pwOld:"",
+            pwNewOne:"",
+            pwNewTwo:"",
+            validate: false,
+            error: null,
+            
     
         }
     },
@@ -74,7 +95,36 @@ export default  {
             this.firstname=this.first
             this.lastname=this.last
             this.email=this.newEmail
+            this.first="";
+            this.last="";
+            this.newEmail="";
+            this.pwOld="";
+            this.pwNewOne="";
+            this.pwNewTwo="";
+            alert("Deine Einstellungen wurden verändert!")
+        },
+        checkPW() {
+
+                if(this.pwOld == this.pwNewOne) {
+                    this.error = "Dein neues Passwort muss ein anderes als dein altes Passwort sein";
+                    return false;
+                }
+                if(this.pwNewOne !== this.pwNewTwo){
+                    this.error = "Password ist nicht gleich";
+                    this.validat = false;
+                    return false;
+                }
+                if(this.pwNewOne.length < 8) {
+                    this.error = "Dein Passwort muss mindestens 8 Zeichen haben";
+                    return false;
+                }
+                
+                this.error = null;
+                this.validat = true;
+                return true;
+            },
+
         }    
     }
-}
+
 </script>
