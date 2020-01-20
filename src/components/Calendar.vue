@@ -24,6 +24,7 @@
                 <v-icon right>mdi-menu-down</v-icon>
               </v-btn>
             </template>
+            <!--Anischt Änderung -->
             <v-list>
               <v-list-item @click="type = 'day'">
                 <v-list-item-title>Day</v-list-item-title>
@@ -41,7 +42,7 @@
           </v-menu>
         </v-toolbar>
       </v-sheet>
-
+      <!-- neues Event hinzufügen-->
       <v-dialog v-model="dialog" max-width="500">
         <v-card>
           <v-container>
@@ -75,7 +76,7 @@
           </v-container>
         </v-card>
       </v-dialog>
-
+<!-- Kalender details aussehen --> 
 <v-sheet height="600">
   <v-calendar
   ref="calendar"
@@ -98,6 +99,8 @@
   full-width
   offset-x
   >
+
+  <!-- Event Karte + Details-->
   <v-card color="grey lighten-4" :width="350" flat>
     <v-toolbar :color="selectedEvent.color" dark>
       <v-btn @click="deleteEvent(selectedEvent.id)" icon>
@@ -141,6 +144,7 @@
 </template>
 
 <script>
+//Datenbank import
 import { db } from '@/main'
 export default {
   data: () => ({
@@ -166,9 +170,11 @@ export default {
     dialog: false,
     dialogDate: false
   }),
+  // ruft Methode get events auf, lädt Daten aus Datenbank
   mounted () {
     this.getEvents()
   },
+  // Datum
   computed: {
     title () {
       const { start, end } = this
@@ -200,7 +206,9 @@ export default {
       })
     }
   },
+  //Methoden
   methods: {
+    //Events aus DB laden
     async getEvents () {
       let snapshot = await db.collection('calEvent').get()
       const events = []
@@ -231,6 +239,7 @@ export default {
     next () {
       this.$refs.calendar.next()
     },
+    //Event der Datenbank hinzufügen
     async addEvent () {
       if (this.name && this.start && this.end) {
         await db.collection("calEvent").add({
@@ -253,6 +262,7 @@ export default {
     editEvent (ev) {
       this.currentlyEditing = ev.id
     },
+    //Events der DB updaten
     async updateEvent (ev) {
       await db.collection('calEvent').doc(this.currentlyEditing).update({
         details: ev.details
@@ -260,6 +270,7 @@ export default {
       this.selectedOpen = false,
       this.currentlyEditing = null
     },
+    //Events der DB löschen
     async deleteEvent (ev) {
       await db.collection("calEvent").doc(ev).delete()
       this.selectedOpen = false,
