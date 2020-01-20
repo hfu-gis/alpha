@@ -8,6 +8,7 @@ import Registrierung from './components/Registrierung.vue'
 import Module from './components/Module.vue'
 import Settings from './components/Settings.vue'
 import Calendar from './components/Calendar.vue'
+import PasswortVergessen from './components/PasswortVergessen.vue'
 
 
 import vuetify from './plugins/vuetify';
@@ -67,6 +68,10 @@ const routes = [
   {
     path:'/calendar',
     component: Calendar
+  },
+  {
+    path:'/passwortvergessen',
+    component: PasswortVergessen
   }
 
 ];
