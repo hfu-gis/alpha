@@ -29,14 +29,16 @@
            </v-row>
            <v-row>
                <v-col>
-                   <v-text-field 
+                   <v-text-field
+                   type="password"
                    v-model="password" 
                    label="Passwort"
                    required
                    ></v-text-field>
                </v-col>
                <v-col>
-                   <v-text-field 
+                   <v-text-field
+                   type="password"
                    v-model="password" 
                    label="Passwort wiederholen"
                    required
@@ -44,13 +46,15 @@
                </v-col>
            </v-row>
            </div>
-           <v-btn class="button" rounded outlined color="red" large>Account erstellen</v-btn>
+           <v-btn @click="auth()" class="button" rounded outlined color="red" large>Account erstellen</v-btn>
          </v-container>
       </v-form>
     </div>
 </template>
 
 <script>
+import firebase from 'firebase';
+
 export default {
     name: 'registrierung',
     data: () => ({
@@ -62,6 +66,20 @@ export default {
             v => /.+@.+/.test(v) || 'E-mail must be valid',
         ],
     }),
+    methods: {
+        auth() {
+            firebase.auth().createUserWithEmailAndPassword(
+                this.email,
+                this.password
+            )
+            .then(() => {
+                this.$router.push('/Calendar')
+            },
+            err => {
+                alert(err)
+            })
+        }
+    }
 }
 </script>
 

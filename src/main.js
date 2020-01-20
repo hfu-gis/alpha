@@ -27,14 +27,13 @@ Vue.config.productionTip = false
 
 firebase.initializeApp({
   
-  apiKey: "AIzaSyAJscyRJaDOb2rsDtJQCOZlxPxvhRI9TLE",
-    authDomain: "vuecalender.firebaseapp.com",
-    databaseURL: "https://vuecalender.firebaseio.com",
-    projectId: "vuecalender",
-    storageBucket: "vuecalender.appspot.com",
-    messagingSenderId: "62435563141",
-    appId: "1:62435563141:web:4d1fcf5e8263a535437bec"
-
+  apiKey: "AIzaSyC5U9YN5l-Wu-ZewJH_rn6S4QSAsZSsiCA",
+  authDomain: "vue-calendar-c8742.firebaseapp.com",
+  databaseURL: "https://vue-calendar-c8742.firebaseio.com",
+  projectId: "vue-calendar-c8742",
+  storageBucket: "vue-calendar-c8742.appspot.com",
+  messagingSenderId: "101190391127",
+  appId: "1:101190391127:web:2b64b866cc1245de579a12"
 });
 
 export const db = firebase.firestore();

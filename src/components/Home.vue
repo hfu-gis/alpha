@@ -19,7 +19,8 @@
            <v-row class="field-password">
                <v-col>
                    <v-text-field 
-                   v-model="password" 
+                   v-model="password"
+                   type="password"   
                    label="Passwort"
                    required
                    ></v-text-field>
@@ -30,13 +31,15 @@
                 <br>
                 <span style="text-decoration: underline;"><a href="/passwortvergessen">Passwort vergessen?</a></span>
            </p>
-           <v-btn class="btn" rounded outlined color="red" large><a href="/Calendar">Login</a></v-btn>
+           <v-btn @click="auth()" class="btn" rounded outlined color="red" large>Login</v-btn>
        </v-container>
    </v-form>
 </div>
 </template>
 
 <script>
+import firebase from 'firebase';
+
 export default {
     name: 'Home',
     data: () => ({
@@ -48,6 +51,21 @@ export default {
             v => /.+@.+/.test(v) || 'E-mail must be valid',
         ],
     }),
+    methods: {
+        auth() {
+            alert("Hier")
+            firebase.auth().signInWithEmailAndPassword(
+                this.email,
+                this.password
+            )
+            .then(() => {
+                this.$router.push('/Calendar')
+            },
+            err => {
+                alert(err)
+            })
+        }
+    }
 }
 </script>
 
