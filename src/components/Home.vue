@@ -30,7 +30,7 @@
                 <br>
                 <span style="text-decoration: underline;"><a href="/passwortvergessen">Passwort vergessen?</a></span>
            </p>
-           <v-btn rounded outlined color="red" large>Login</v-btn>
+           <v-btn class="btn" rounded outlined color="red" large><a href="/Calendar">Login</a></v-btn>
        </v-container>
    </v-form>
 </div>
@@ -78,6 +78,10 @@ export default {
 
     .field-password {
         width: 60%;
+    }
+
+    .btn a{
+        text-decoration: none;
     }
 
 </style>
