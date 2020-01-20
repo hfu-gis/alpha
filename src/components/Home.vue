@@ -27,6 +27,8 @@
            </v-row>
            <p>Noch keinen Account?<br>
                 <span style="text-decoration: underline;"><a href="/registrierung">Hier regsitrieren!</a></span>
+                <br>
+                <span style="text-decoration: underline;"><a href="/passwortvergessen">Passwort vergessen?</a></span>
            </p>
            <v-btn rounded outlined color="red" large>Login</v-btn>
        </v-container>
