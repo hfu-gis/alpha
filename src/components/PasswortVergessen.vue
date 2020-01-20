@@ -34,7 +34,7 @@ export default {
 <style scoped>
 
     /* Hard-Reset der Abstände */
-{
+* {
     padding: 0;
     margin: 0;
 }
